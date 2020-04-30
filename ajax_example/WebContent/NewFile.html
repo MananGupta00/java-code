@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+let quesList = [];
+var questions = ["You are required to enter a word that consists of  and  that denote the number of Zs and Os respectively. The input word is considered similar to word zoo if .<br />Determine if the entered word is similar to word zoo.<br />For example, words such as zzoooo and zzzoooooo are similar to word zoo but not the words such as zzooo and zzzooooo.<br />Input format<br />First line: <br />A word that starts with several Zs and continues by several Os.<br />Note: The maximum length of this word must be .<br />Output format<br />Print Yes if the input word can be considered as the string zoo otherwise, print No."];
+questions.forEach(fun);
+//var i=4;
+const data;
+async function set_Api() {
+    const response = await fetch("URL.....");
+    data = response.json();
+    With_Api(data,0);
+}
+function With_Api(data,index) {
+    var d= index.toString();
+    document.getElementsByTagName("div")[3].setAttribute("id",d);
+    document.getElementById(d).innerHTML = data.question[index];
+}
+set_Api();
+
+function fun(item,index) {
+    //element.setAttribute("id", value).innerHTML = item + "<br />";
+    //document.getElementsByClassName("Ques")[index].setAttributes("id",index).innerHTML = item + "<br />";
+    //document.getElementById("p1")[index].innerHTML = index + ":" + item + "<br />";
+    var d= index.toString();
+    document.getElementsByTagName("div")[3].setAttribute("id",d);
+    //i=i+3;
+    document.getElementById(d).innerHTML = item + "   " + index;
+    //console.log(index + ' - ' + item);
+}
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a in the input field below:</b></p>
+<form>
+First name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+</body>
+</html>
